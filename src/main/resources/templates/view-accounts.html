@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Accounts</title>
+</head>
+<body>
+<h1>Accounts and Transactions</h1>
+<div th:if="${accounts != null}">
+    <div th:each="account : ${accounts}">
+        <h2>Account Details</h2>
+        <ul>
+            <li>ID: <span th:text="${account.id}"></span></li>
+            <li>Customer ID: <span th:text="${account.customerId}"></span></li>
+            <li>Balance: <span th:text="${account.balance}"></span></li>
+        </ul>
+        <h3>Transactions</h3>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Account ID</th>
+                <th>Amount</th>
+                <th>Timestamp</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="transaction : ${account.transactions}">
+                <td th:text="${transaction.id}"></td>
+                <td th:text="${transaction.accountId}"></td>
+                <td th:text="${transaction.amount}"></td>
+                <td th:text="${transaction.timestamp}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<a href="/">Back to Home</a>
+</body>
+</html>

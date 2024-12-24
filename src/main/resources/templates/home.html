@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the Account Management System</h1>
+<nav>
+    <ul>
+        <li><a href="/view-accounts">View Accounts and Transactions</a></li>
+        <li>
+            <form action="/open-account" method="post">
+                <label for="initialCredit">Initial Credit:</label>
+                <input type="number" id="initialCredit" name="initialCredit" required>
+                <button type="submit">Open Account</button>
+            </form>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
