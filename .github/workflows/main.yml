@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: target/*.jar
+          path: ui-service/target/*.jar
 
   dockerize:
     name: Docker Build and Push
