@@ -3,7 +3,7 @@ name: UI-Service CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: assignment/ui-service/target/*.jar
+          path: target/*.jar
 
   dockerize:
     name: Docker Build and Push
