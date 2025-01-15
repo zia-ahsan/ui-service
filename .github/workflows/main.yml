@@ -3,7 +3,7 @@ name: UI-Service CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
 
 jobs:
