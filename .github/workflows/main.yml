@@ -52,5 +52,6 @@ jobs:
 
       - name: Build and Push UI-Service Docker Image
         run: |
+          cp target/*.jar app.jar
           docker build -t ${{ secrets.DOCKER_USERNAME }}/ui-service:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/ui-service:latest
