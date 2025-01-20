@@ -73,3 +73,10 @@ Ensure both services are running before testing the integration.
 For any issues or questions, please contact the developer.
 * **mobile:** 0645881639
 * **email:** zia7770@yahoo.com
+
+3. **CI/CD (In Progress):**
+
+### Support
+For any issues or questions, please contact the developer.
+* **mobile:** 0645881639
+* **email:** zia7770@yahoo.com
