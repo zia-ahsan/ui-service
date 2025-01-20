@@ -60,3 +60,15 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/ui-service:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/ui-service:latest
+
+  deploy-ui:
+    name: Deploy UI to Minikube
+    runs-on: [self-hosted, wsl-runner-ui]
+    needs: dockerize  # Ensures deployment happens after Docker push
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy UI-Service to Minikube
+        run: |
+          kubectl apply -f ${{ github.workspace }}/ui-service/k8s/ui-service.yaml
