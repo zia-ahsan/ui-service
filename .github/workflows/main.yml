@@ -71,4 +71,4 @@ jobs:
 
       - name: Deploy UI-Service to Minikube
         run: |
-          kubectl apply -f ${{ github.workspace }}/ui-service/k8s/ui-service.yaml
+          kubectl apply -f ${{ github.workspace }}/k8s/ui-service.yaml
