@@ -17,6 +17,9 @@ spec:
           image: zia7770/ui-service:latest
           ports:
             - containerPort: 8083
+          env:
+            - name: ACCOUNT_SERVICE_URL
+              value: "http://account-service:8082"
 
 ---
 apiVersion: v1
