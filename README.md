@@ -74,7 +74,8 @@ For any issues or questions, please contact the developer.
 * **mobile:** 0645881639
 * **email:** zia7770@yahoo.com
 
-3. **CI/CD (In Progress):**
+3. **CI/CD:**
+   Implemented CI/CD using self-hosted runner to deploy to minikube
 
 ### Support
 For any issues or questions, please contact the developer.
